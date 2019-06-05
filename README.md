@@ -45,3 +45,13 @@ Model is known as core of the JavaScript application. It retrieves and populates
 Collection:
 ============
 Collection is a set of models used to bind events, when a modification is made in the collection. In collection, there is a list of models that can be processed in the loop and support sorting and filtering.  
+
+1. el:
+============
+  The Backbone.js View el method defines the element that is used as the view reference. this.el is created from the view's tagName, className, id and attributes properties, 
+  if specified. If not, el is an empty div.
+
+2. $el:
+============
+   The Backbone.js view $el method specifies a cached jQuery object for a views element. By using 
+   this method, you don't have to re-wrap the DOM element all the time.  

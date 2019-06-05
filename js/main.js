@@ -1,21 +1,18 @@
 $(document).ready(function(){
-    var first = Backbone.View.extend({
-        tagName: "span",
-        className: "abc",
-        id: "idhye",
+    var second = Backbone.View.extend({
+        tagName: "p",
         initialize: function(){
-            this.render();
-        },
-        render: function(){
-            console.log("Hello Jay!");
-            this.$el.html("This is the Content from HTML Page");
-            // console.log(this.$el); //$el is Jquery elemet which refers to the DOM element
-            console.log(this.el); // el is DOM elemet
-            console.log(this.$el);// $el is Jquery elemet which refers to the DOM element
+
+            this.$el.html("Hello Jay!");
+
+            //console.log(this.el); // Provide empty default div DOM element
+            //console.log(this.$el); // This is Jquery Object which points to el
+            //this.$el.html('This $el point to th p tag');
+            //console.log("This is second Log");
+            //$('#content').html("This is Div Content");
         }
     })
-    //var f1 = new first();
-    var f1 = new first({
-        el: "#content"
-    });
+
+    var s1 = new second();
+        $("#content").html(s1.$el);
 });
